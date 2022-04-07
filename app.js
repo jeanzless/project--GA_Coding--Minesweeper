@@ -1,35 +1,30 @@
-
-const cells = []; 
-// const state = {
-
-
-
-//   bomb: false, //check if there is a bomb 
-//   nextTo: false, // check if grid is next to a bomb
-//   empty: false, // check ifchecks if the grid is empty
-//   hidden: false, // checks if the bomb is hidden meaning it might have a bomb or not (can be marked)
-//   marked: false,// checks if the grid has been marked.
-
-// }
-const width = 5;
-const totalCell = width * width;
-
-
-// const gridElems = document.querySelectorAll('div');
 const grid = document.querySelector('.grid');
-
+const width = 8;
+const totalCells = width * width;
+const gridList = document.querySelectorAll('.grid div');
+const main = document.querySelectorAll('body');
+let mode = null;
 console.log(grid);
-
+console.log(gridList);
 
 function createGrid() {
-  for (let i = 0; totalCell - 1; i++){
+  for (let i = 0; i < totalCells; i++){
 
     const cell = document.createElement('div');
-    cell.classList.add('grid')
-    cell.innerHTML = i;
-    // grid.appendChild(cell);
-    cells.push(cell)
+    cell.classList.add('cell');
+    cell.textContent = i + 1;
+    grid.appendChild(cell);
+    cell.addEventListener('click', () => {
+      console.log(cell.innerHTML);
+    })
+
   }
+  console.log(gridList);
 }
 
-createGrid();
+function startGame(mode){
+
+  createGrid();
+
+}
+startGame('');

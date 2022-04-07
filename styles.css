@@ -1,40 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   height: 100vh;
   margin: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .grid-wrapper {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .grid {
   align-items: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
   display: flex;
-  height: 100%;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 150px;
-  width: 600px;
-};
+  width: 50vw;
+}
 
 .grid div {
   border: 1px solid lightgrey;
   flex-grow: 1;
-  height: 100%;
-  width: 25%;
-}
-
-.different {
-  background-image: url("http://assets.stickpng.com/images/5842f074a6515b1e0ad75b16.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
+  height: 45px;
+  width: 45px;
 }
