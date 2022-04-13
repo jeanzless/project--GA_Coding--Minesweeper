@@ -29,3 +29,11 @@ body {
   height: 45px;
   width: 45px;
 }
+
+#bomb {
+  background-color: red;
+}
+
+#nextTo {
+  background-color: grey;
+}
